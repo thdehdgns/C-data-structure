@@ -1,2 +1,13 @@
 ﻿  Program.cpp
-  Program.vcxproj -> C:\Users\ehdgn\OneDrive\Desktop\Program\x64\Debug\Program.exe
+C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\SingleLinkedList.h(123,10): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+  (소스 파일 'Program.cpp'을(를) 컴파일하는 중)
+      C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\SingleLinkedList.h(123,10):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\Program.cpp(6,27):
+          컴파일되는 클래스 템플릿 인스턴스화 'SingleLinkedList<int>'에 대한 참조를 확인하세요.
+          C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\SingleLinkedList.h(110,7):
+          클래스 템플릿 멤버 함수 'void SingleLinkedList<int>::pop_back(void)'을(를) 컴파일하는 중입니다.
+              C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\Program.cpp(14,20):
+              'main'에서 'SingleLinkedList<int>::pop_back'에 대한 첫 번째 참조를 확인하세요.
+  
+  Program.vcxproj -> C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\x64\Debug\Program.exe

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+using namespace std;
 template<typename T>
 class SingleLinkedList
 {
@@ -11,7 +12,7 @@ private:
 		Node* next;
 	};
 	Node * head;
-	Node* currentNode;
+	
 public:
 	SingleLinkedList()
 	{
@@ -51,20 +52,91 @@ public:
 		}
 		else if(head != nullptr)
 		{
+			Node* currentNode =head;
 			newNode->data = data;
-			if (newNode->next == nullptr)
+			while (currentNode->next != nullptr)
 			{
-				currentNode = newNode;
+				currentNode = currentNode->next;
 			}
-			else if (newNode->next != nullptr)
-			{
+			currentNode->next = newNode;
 
-			}
+			newNode->data = data;
+			newNode->next = nullptr;
+			
 		}
 
 		Size++;
 	}
 	
+
+	void pop_front()
+	{
+		if (head == nullptr)
+		{
+			cout << "Linked List is empty" << endl;
+		}
+		else if (head != nullptr)
+		{
+			Node* deleteNode = head;
+			
+			head = deleteNode->next;
+
+			delete deleteNode;
+			
+			Size--;
+		}
+
+	}
+
+	void show()
+	{
+		if (head == nullptr)
+		{
+			cout << "Linked List is empty" << endl;
+		}
+		else if (head != nullptr)
+		{
+			Node* currentNode = head;
+			 
+			while (currentNode != nullptr)
+			{
+				cout << currentNode->data << endl;
+				currentNode = currentNode->next;
+
+			}
+		}
+	}
+
+	void pop_back()
+	{
+		Node* deleteNode = head;
+		Node* previousNode = head;
+
+		if (head == nullptr )
+		{
+			cout << "Linked List is empty" << endl;
+		}
+		else
+		{
+			if (head->next == nullptr)
+			{
+				delete deleteNode;
+				head == nullptr;
+				Size--;
+			}
+			else
+			{
+				while (previousNode->next->next != nullptr)
+				{
+					previousNode = previousNode->next;
+				}
+				delete previousNode->next;
+				previousNode->next = nullptr;
+				Size--; //¼÷Á¦
+
+			}
+		}
+	}
 
 };
 
