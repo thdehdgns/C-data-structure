@@ -109,33 +109,50 @@ public:
 
 	void pop_back()
 	{
-		Node* deleteNode = head;
-		Node* previousNode = head;
-
 		if (head == nullptr )
 		{
 			cout << "Linked List is empty" << endl;
 		}
 		else
 		{
-			if (head->next == nullptr)
+			Node* deleteNode = head;
+			Node* previousNode = nullptr;
+			if (Size == 1)
 			{
+				head = deleteNode->next;
 				delete deleteNode;
-				head == nullptr;
-				Size--;
 			}
 			else
 			{
-				while (previousNode->next->next != nullptr)
+				while (deleteNode->next != nullptr)
 				{
-					previousNode = previousNode->next;
+					previousNode = deleteNode;
+					deleteNode = deleteNode->next;
 				}
-				delete previousNode->next;
-				previousNode->next = nullptr;
-				Size--; //¼÷Á¦
 
+				previousNode->next = deleteNode->next;
+				delete deleteNode;
 			}
+			Size--;
 		}
+	}
+
+	const int& Size()
+	{
+		return Size;
+	}
+
+	~SingleLinkedList()
+	{
+		if (head != nullptr)
+		{
+			while (Size != 0)
+			{
+				pop_back();
+			}
+
+		}
+		
 	}
 
 };
