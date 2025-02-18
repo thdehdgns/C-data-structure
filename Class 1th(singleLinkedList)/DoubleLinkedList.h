@@ -9,7 +9,7 @@ private:
 	struct Node
 	{
 		T data;
-		Node* Next;
+		Node* next;
 		Node* previous;
 
 	};
@@ -28,23 +28,104 @@ public:
 	void push_front(T data)
 	{
 		Node* newNode = new Node;
+		newNode->data = data;
+		newNode->next = nullptr;
+		newNode->previous = nullptr;
+
 		if (head == nullptr)
 		{
 			head = newNode;
 			tail = newNode;
-			head->data = data;
-			head->Next = nullptr;
-			head->previous = nullptr;
+		}
+		else
+		{
+			head->previous = newNode;
+			newNode->next = head;
+
+			head = newNode;
+		}
+		size++;
+	}
+
+	void show()
+	{
+		if (head == nullptr)
+		{
+			cout << "Empty List" << endl;
 		}
 		else if (head != nullptr)
 		{
-			newNode->data = data;
-			newNode->Next = head;
+			Node* currentNode = head;
+
+			while (currentNode != nullptr)
+			{
+				cout << currentNode->data << endl;
+				currentNode = currentNode->next;
+
+			}
+		}
+	}
+
+
+	void pop_front()
+	{
+		if (head == nullptr)
+		{
+			cout << "Linked list is empty" << endl;
+		}
+		else 
+		{
+			Node* deleteNode = head;
+
+			if (head == tail)
+			{
+				head = nullptr;
+				tail = nullptr;
+			}
+			else
+			{
+				deleteNode->next->previous = nullptr;
+				head = head->next;
+			}
+
+			delete deleteNode;
+
+			size--;
+
+		}
+
+
+	}
+
+
+	void push_back(T data)
+	{
+		Node* newNode = new Node;
+		newNode->data = data;
+		newNode->next = nullptr;
+		newNode->previous = nullptr;
+
+		if (head == nullptr)
+		{
 			head = newNode;
-			head->Next = tail;
-			tail->previous = head;
+			tail = newNode;
+		}
+		else
+		{
+			tail->next = newNode;
+			newNode->previous = tail;
+
+			tail = newNode;
 		}
 		size++;
+	}
+
+	~DoubleLinkedList()
+	{
+		while (head != nullptr)
+		{
+			pop_front();
+		}
 	}
 
 };
