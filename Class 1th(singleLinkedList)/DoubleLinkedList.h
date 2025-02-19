@@ -120,6 +120,37 @@ public:
 		size++;
 	}
 
+	void pop_back()
+	{
+		if (head == nullptr)
+		{
+			cout << "Linked is Empty" << endl;
+		}
+		else
+		{
+			Node* deleteNode = tail;
+			if (head->next == nullptr)
+			{
+				tail = nullptr;
+				head = nullptr;
+				
+				size--;
+			}
+			else
+			{
+				tail = tail->previous;
+				tail->next = nullptr;
+				size--;
+			}
+			delete deleteNode;
+		}
+	}
+
+	const int& Size()
+	{
+		return size;
+	}
+
 	~DoubleLinkedList()
 	{
 		while (head != nullptr)

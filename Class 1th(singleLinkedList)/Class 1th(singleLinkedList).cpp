@@ -7,10 +7,13 @@ int main()
     DoubleLink.push_front(10);
     DoubleLink.push_front(20);
     DoubleLink.push_front(30);
-    DoubleLink.push_back(40);
-    DoubleLink.push_back(50);
-    DoubleLink.show();
+    DoubleLink.pop_back();
+    DoubleLink.pop_back();
+    DoubleLink.pop_back();
+    DoubleLink.pop_back();
 
+    DoubleLink.show();
+    cout << "Size: " << DoubleLink.Size() << endl;
 
 
     return 0;
