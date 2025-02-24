@@ -1,0 +1,6 @@
+﻿  Class 4th(Stack).cpp
+  LinearQueue.cpp
+  코드를 생성하고 있습니다...
+C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 4th(Stack)\LinearQueue.h(63,1): warning C4715: 'LinearQueue<int>::Front': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 4th(Stack)\LinearQueue.h(68,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+  Class 4th(Stack).vcxproj -> C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\x64\Debug\Class 4th(Stack).exe

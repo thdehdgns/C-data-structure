@@ -10,6 +10,7 @@ int main()
     stack.push(40);
     stack.push(50);
     
+    cout << "Stack Size: " << stack.Sizee() << endl;
 
     while (stack.Empty() == false)
     {
