@@ -1,0 +1,15 @@
+﻿  Class 6th (Circle Queue).cpp
+C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 6th (Circle Queue)\Vector.h(43,22): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+  (소스 파일 'Class%206th%20(Circle%20Queue).cpp'을(를) 컴파일하는 중)
+      C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 6th (Circle Queue)\Vector.h(43,22):
+      템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+          C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 6th (Circle Queue)\Class 6th (Circle Queue).cpp(6,17):
+          컴파일되는 클래스 템플릿 인스턴스화 'Vector<int>'에 대한 참조를 확인하세요.
+          C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 6th (Circle Queue)\Vector.h(35,7):
+          클래스 템플릿 멤버 함수 'void Vector<int>::pop_back(void)'을(를) 컴파일하는 중입니다.
+              C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 6th (Circle Queue)\Class 6th (Circle Queue).cpp(10,20):
+              'main'에서 'Vector<int>::pop_back'에 대한 첫 번째 참조를 확인하세요.
+  
+  Vector.cpp
+  코드를 생성하고 있습니다...
+  Class 6th (Circle Queue).vcxproj -> C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\x64\Debug\Class 6th (Circle Queue).exe
