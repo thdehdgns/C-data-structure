@@ -1,0 +1,6 @@
+﻿  Class 7th(Vector).cpp
+C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 7th(Vector)\String.h(20,23): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 'Class%207th(Vector).cpp'을(를) 컴파일하는 중)
+  
+C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Class 7th(Vector)\String.h(54,1): warning C4172: 지역 변수 또는 임시 의 주소를 반환하는 중
+  Class 7th(Vector).vcxproj -> C:\Users\ehdgn\OneDrive\Desktop\C-data-structure\Program\x64\Debug\Class 7th(Vector).exe
