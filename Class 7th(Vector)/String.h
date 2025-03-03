@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <cstring>
 using namespace std;
 class String
 {
@@ -54,6 +55,52 @@ public:
 		return size - 1;
 	}
 
+
+	void Append(const char * word)
+	{
+		
+			char* newpointer = new char[size + strlen(word) + 1];
+			for (int i = 0; i < size; i++)
+			{
+				newpointer[i] = pointer[i];
+			}
+			
+			for (int i = size; i < size+ strlen(word) + 1; i++)
+			{
+				newpointer[i] = word[i-size];
+			}
+			size = size + strlen(word) + 1;
+			if (pointer != nullptr)
+			{
+				delete[] pointer;
+			}
+			pointer = newpointer;
+	}
+
+	unsigned long long find(const char * word)
+	{
+		int length = (size-1);
+		int count = 0;
+		int i = 0;
+		int j = 0;
+		
+		for (i = 0; i < length; i++)
+		{
+			for (j = 0; j < strlen(word); j++)
+			{
+				if (pointer[i + j] != word[j])
+				{
+					break;
+				}
+			}
+			if (j == strlen(word))
+			{
+				return i;
+			}
+		}
+
+		return 18446744073709551615;
+	}
 
 
 	~String()
