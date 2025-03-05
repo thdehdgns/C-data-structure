@@ -7,7 +7,7 @@ int main()
 
     hashtable.Insert("Sowrd", 10000);
     hashtable.Insert("Armor", 4000);
-
+    hashtable.Remove("Armor");
 
     return 0;
 }

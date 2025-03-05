@@ -90,6 +90,58 @@ public:
         bucket[hashIndex].count++;
     }
 
+    void Remove(KEY key)
+    {
+        // 1. 해시 함수를 통해서 값을 받는 임시 변수
+        int hashIndex = HashFunction(key);
+
+        // 2. Node를 탐색할 수 있는 포인터 변수 선언
+        Node* currentNode = bucket[hashIndex].head;
+
+        // 3. 이전 Node를 저장할 수 있는 포인터 변수 선언
+        Node* previousNode = nullptr;
+
+        // 4. currentNode가 nullptr과 같다면 함수를 종료합니다.
+        if (currentNode == nullptr)
+        {
+            cout << "Not Key Found" << endl;
+
+            return;
+        }
+        else
+        {
+            // 5. currentNode를 이용해서 내가 찾고자 하는 Key 값을 찾습니다.
+            while (currentNode != nullptr)
+            {
+                if (currentNode->key == key)
+                {
+                    if (currentNode == bucket[hashIndex].head)
+                    {
+                        bucket[hashIndex].head = currentNode->next;
+                    }
+                    else
+                    {
+                        previousNode->next = currentNode->next;
+                    }
+
+                    bucket[hashIndex].count--;
+
+                    delete currentNode;
+
+                    return;
+                }
+                else
+                {
+                    previousNode = currentNode;
+
+                    currentNode = currentNode->next;
+                }
+            }
+
+            cout << "Not Key Found" << endl;
+        }
+    }
+
     ~HashTable()
     {
         
